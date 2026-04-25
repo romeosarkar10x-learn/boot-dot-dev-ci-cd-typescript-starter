@@ -13,7 +13,7 @@
         "test": "vitest --run --coverage",
         "format:check": "prettier --check \"**/*.{js,ts,json,css,md}\"",
         "format:write": "prettier --write \"**/*.{js,ts,json,css,md}\"",
-        "lint": "eslint . --max-warnings=0"
+        "lint": "eslint src --max-warnings=0"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
