@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:22-slim
+FROM node:25-trixie
 
 WORKDIR /usr/src/app
 

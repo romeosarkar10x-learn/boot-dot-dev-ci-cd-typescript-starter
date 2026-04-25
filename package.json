@@ -1,41 +1,51 @@
 {
-  "name": "learn-cicd-typescript-starter",
-  "version": "1.0.0",
-  "main": "dist/main.js",
-  "type": "module",
-  "scripts": {
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio",
-    "build": "npx tsc",
-    "start": "node dist/main.js",
-    "dev": "npx tsc && node dist/main.js",
-    "test": "vitest --run --coverage"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.9.0",
-    "@vitest/coverage-v8": "^4.1.5",
-    "drizzle-kit": "^0.28.1",
-    "globals": "^15.12.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.6.3",
-    "vitest": "^4.1.5"
-  },
-  "dependencies": {
-    "@libsql/client": "^0.14.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "drizzle-orm": "^0.36.2",
-    "express": "^4.21.1",
-    "uuid": "^11.0.3"
-  },
-  "prettier": {
-    "printWidth": 80,
-    "useTabs": false,
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": false
-  }
+    "name": "learn-cicd-typescript-starter",
+    "version": "1.0.0",
+    "main": "dist/main.js",
+    "type": "module",
+    "scripts": {
+        "db:generate": "drizzle-kit generate",
+        "db:migrate": "drizzle-kit migrate",
+        "db:studio": "drizzle-kit studio",
+        "build": "npx tsc",
+        "start": "node dist/main.js",
+        "dev": "npx tsc && node dist/main.js",
+        "test": "vitest --run --coverage",
+        "format:check": "prettier --check \"**/*.{js,ts,json,css,md}\"",
+        "format:write": "prettier --write \"**/*.{js,ts,json,css,md}\"",
+        "lint": "eslint src --max-warnings=0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@types/cors": "^2.8.17",
+        "@types/eslint-plugin-security": "^3.0.1",
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.9.0",
+        "@vitest/coverage-v8": "^4.1.5",
+        "drizzle-kit": "^0.28.1",
+        "eslint": "^10.2.1",
+        "eslint-plugin-security": "^4.0.0",
+        "globals": "^15.15.0",
+        "prettier": "3.8.3",
+        "tsx": "^4.19.2",
+        "typescript": "^5.6.3",
+        "typescript-eslint": "^8.59.0",
+        "vitest": "^4.1.5"
+    },
+    "dependencies": {
+        "@libsql/client": "^0.14.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "drizzle-orm": "^0.36.2",
+        "express": "^4.21.1",
+        "jiti": "^2.6.1",
+        "uuid": "^11.0.3"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "useTabs": false,
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": false
+    }
 }
