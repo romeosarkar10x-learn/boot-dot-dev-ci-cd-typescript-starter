@@ -23,6 +23,8 @@ jobs:
 
             - name: Setup gcloud
               uses: google-github-actions/setup-gcloud@v3
+              with:
+                  credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
             - name: Push it to Google Artifact Registry
               run: gcloud builds submit --tag asia-south1-docker.pkg.dev/romeosarkar10x-notely/notely-ar-repo/notely:latest .
