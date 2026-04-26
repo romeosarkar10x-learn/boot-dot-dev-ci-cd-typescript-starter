@@ -18,6 +18,14 @@ jobs:
             - name: Push it to Google Artifact Registry
               run: gcloud builds submit --tag asia-south1-docker.pkg.dev/romeosarkar10x-notely/notely-ar-repo/notely:latest .
 
+            - name: Setup node
+              uses: actions/setup-node@v6
+              with:
+                  node-version: 25
+
+            - name: Install dependencies
+              run: npm ci
+
             - name: Run database migrations
               run: npm run db:migrate
               env:
